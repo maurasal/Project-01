@@ -8,12 +8,32 @@
     <!-- Linked Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
     <style>
-        /* Puts animated icons before and after banner*/
-        h1:before,
+            /* Puts animated icons before and after banner*/
+            h1:before,
         h1:after {
             content: '🎞️';
             margin: 0 10px;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        body {
+            background: linear-gradient(to right, #4f3a65, rgb(202, 74, 95), rgb(255, 183, 0), rgb(255, 234, 0), rgb(167, 167, 26), rgb(36, 183, 14));
+            background-size: 200% 100%;
+            animation: gradientAnimation 10s ease infinite; /* Adjust the duration for a slower or faster animation */
         }
     </style>
 </head>
@@ -23,8 +43,8 @@
 
     <!-- Styling for banner -->
     <header id='banner' class="text-center py-8">
-        <h1 class="text-6xl font-bold tracking-wider bg-gradient-to-r from-pink-500 via-yellow-500 to-green-500 p-4 inline-block shadow-lg transform rotate-3">ReelRefreshers</h1>
-    </header>
+        <h1 class="text-6xl font-bold tracking-wider bg-gradient-to-r from-pink-500 via-yellow-500 to-green-500 p-4 inline-block shadow-lg transform rotate-3 wiggle">ReelRefreshers</h1>
+      </header>
 
     <main>
     <section id="genre-container" class="">
@@ -156,20 +176,25 @@
         <section><h2>Unwind, Sip, and Enjoy the Flick!</h2></section>
 
         <!-- Pulls random movie w/ its poster and summary based on selected genre -->
-        <section id="movies" class="title">
+        <section id="movies" class="title text-black">
         <p id="chosenMovie"></p>
         <img id="moviePoster">
         <p id="movie-overview"></p>
         </section>
         <br>
+
+        <button id="returnHomeButton" onclick="returnHome()" class="hidden bg-cover bg-center bg-no-repeat hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" style="background-image: url('./Assets/photos/Free Refills.png'); width: 200px; height: 50px;"></button>
+         
+
         <!-- Pulls random drink w/ image and instructions -->
-        <section id="drinks" class="title">
+        <section id="drinks" class="title text-black"></p>
         <p id="chosenDrink"></p>
         <img id="drinkPhoto">
-        <ul id="drink-ingredients"></ul>
-        <p id="drink-instructions"></p>
-            </section>
+        <ul id="drink-ingredients"  class="text-black"></p> ></ul>
+        <p id="drink-instructions"  class="text-black"></p> 
+        </section>
     </section>
+
     </main>
 
     <!-- Footer  -->

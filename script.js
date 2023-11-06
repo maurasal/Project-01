@@ -19,7 +19,7 @@ function fetchMovieData(genreId) {
       const posterSrc = 'https://image.tmdb.org/t/p/w185'
 
       // Display movie poster
-      moviePosterEl.src = posterSrc + chosenMovie.poster_path
+      moviePosterEl.src = posterSrc + chosenMovie.poster_path;
       console.log(chosenMovie.title);
       console.log(chosenMovie.poster_path);
       console.log(chosenMovie);
@@ -45,15 +45,19 @@ function fetchRandomDrink() {
     .then(response => response.json())
     .then(data => {
       console.log(data);
-      var drinkImg = data.drinks[0].strDrinkThumb
-      console.log(drinkImg)
+      var drinkImg = data.drinks[0].strDrinkThumb;
+      console.log(drinkImg);
       const chosenDrink = data.drinks[0].strDrink;
-      // Displays drink photot
-      const drinkPhotoEl = document.getElementById('drinkPhoto')
-      drinkPhotoEl.src = drinkImg
+      // Displays drink photo
+      const drinkPhotoEl = document.getElementById('drinkPhoto');
+      drinkPhotoEl.src = drinkImg;
       // Displays name of drink
       const chosenDrinkEl = document.getElementById("chosenDrink");
       chosenDrinkEl.textContent = `Drink: ${chosenDrink}`;
+
+         // Clear the previous ingredients
+         const IngredSection = document.getElementById("drink-ingredients");
+         IngredSection.innerHTML = '';
 
       // Create loop to cycle through up to 15 ingredients
       for (let i=1; i < 16; ++i) {
@@ -90,4 +94,18 @@ function getSuggestion(button) {
 
   fetchMovieData(selectedGenre);
   fetchRandomDrink();
+
+  // Show the "Want a ReFill" button
+  const returnHomeButton = document.getElementById('returnHomeButton');
+  returnHomeButton.classList.remove('hidden');
+}
+
+// Function to return to the home screen
+function returnHome() {
+  // Show the genre-container section
+  document.getElementById("genre-container").classList.remove("hidden");
+  // Hide the results-container section
+  document.getElementById("results-container").classList.add("hidden");
+  // Hide the "Want a ReFill" button
+  document.getElementById("returnHomeButton").classList.add("hidden");
 }
