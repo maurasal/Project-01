@@ -24,20 +24,21 @@
     <!-- Styling for banner -->
     <header id='banner' class="text-center py-8">
         <h1 class="text-6xl font-bold tracking-wider bg-gradient-to-r from-pink-500 via-yellow-500 to-green-500 p-4 inline-block shadow-lg transform rotate-3">ReelRefreshers</h1>
+        <!-- Slogan -->
+        <section><h2 id="slogan" class="">Elevating your movie time, one refresh at a time</h2></section>
+    </header>
+
         <nav class="header-nav">
             <a href="index.html" class="my-4 ml-20 p-2 px-4 rounded-lg bg-blue-500 text-white hover:bg-blue-700">Home</a>
             <a href="saved-favorites.html" class="my-4 mr-20 p-2 px-4 rounded-lg bg-blue-500 text-white hover:bg-blue-700">Saved Favorites</a>
             </nav>
    
-    </header>
     <div id="custom-notification" class="custom-notification">
         <p id="notification-text"></p>
       </div>
       
     <main>
     <section id="genre-container" class="">
-        <!-- Slogan -->
-        <section><h2>Elevating your movie time, one refresh at a time</h2></section>
         <section>
             <h3>Indulge in Movie Mixology! Elevate your movie night with our app, designed to whisk you away on a cinematic and cocktail adventure. 
                 Whether you're planning a cozy night in or a virtual movie night with friends, we've got you covered. 
@@ -173,6 +174,11 @@
 
             
         
+        <section id="results-container" class="hidden">
+            <section id="movies">
+                <button id="save-favorite">Save to Favorites</button>
+
+                <section><h2>Unwind, Sip, and Enjoy the Flick!</h2></section>
 
         <!-- Pulls random movie w/ its poster and summary based on selected genre -->
         <section id="results-container" class="hidden">
@@ -181,17 +187,17 @@
         <p id="chosenMovie"></p>
         <img id="moviePoster">
         <p id="movie-overview"></p>
+        <p id="release-date"></p>
         
         </section>
        
         <br>
-       
-
         <!-- Pulls random drink w/ image and instructions -->
         <section id="drinks" class="title">
         <p id="chosenDrink"></p>
         <img id="drinkPhoto">
         <ul id="drink-ingredients"></ul>
+        <p id="drink-glass"></p>
         <p id="drink-instructions"></p>
             
             <div class="absolute bottom-0 right-4">
@@ -219,19 +225,20 @@
     <script>
         //  saved favorites button element
         const savedFavoritesButton = document.getElementById('saved-favorites-button');
-      
         //  event listener to the button
         savedFavoritesButton.addEventListener('click', function() {
           // redirecting to the saved favorites page
-          window.location.href = 'saved-favorites.html';
+        window.location.href = 'saved-favorites.html';
         });
-      </script>
+    </script>
 
+    <!-- Holds the functions for local storage for favorites -->
+    <script src="JavaScript/local-storage.js"></script>
     <!-- Holds the function that hides/unihides sections -->
-    <script src="style-page.js"></script>
+    <script src="JavaScript/style-page.js"></script>
     <!-- Holds the functions for the APIs -->
-    <script src="script.js"></script>
-0
+    <script src="JavaScript/script.js"></script>
+
 </body>
 
 </html>
