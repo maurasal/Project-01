@@ -120,11 +120,11 @@ favoritesButton.addEventListener('click', () => {
   // alert('Your selected pairing has been added to the favorites list!');
 
 
-  // Clear the chosenMovie and chosenDrink elements to allow the user to continue selecting favorites
+  // clear the chosenMovie and chosenDrink elements to allow the user to continue selecting favorites
   document.getElementById('chosenMovie').textContent = '';
   document.getElementById('chosenDrink').textContent = '';
 
-  // Hide the custom notification after a few seconds (you can adjust the timeout as needed)
+  // hide the custom notification after a few seconds
   setTimeout(() => {
     customNotification.style.display = 'none';
     customNotification.classList.remove('fade-in');
@@ -135,7 +135,7 @@ favoritesButton.addEventListener('click', () => {
 });
 
 function saveToLocalStorage(movie, cocktail, ingredients) {
-  // Load existing favorites from localStorage or initialize an empty array
+  // Load existing favorites from localStorage 
   let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
   // Save the selected movie, cocktail, and ingredients
@@ -149,7 +149,7 @@ function saveToLocalStorage(movie, cocktail, ingredients) {
 function refreshFavoritesList() {
   favoritesList.innerHTML = '';
 
-  // Load existing favorites from localStorage or initialize an empty array
+  // Load existing favorites from localStorage or start empty array
   let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
   // Display the updated list of favorites
@@ -160,5 +160,5 @@ function refreshFavoritesList() {
   }
 }
 
-// Initial load of favorites on page load
+// Initial load of favorites 
 refreshFavoritesList();

@@ -306,3 +306,37 @@ p {
     }
   }
   
+  /* Made adjustments to try and move the save to favorites button lower */
+#drinks {
+    min-height: 600px; 
+    position: relative; 
+}
+
+#results-container {
+    min-height: 600px; 
+}
+
+#save-favorite {
+  
+    bottom: 0px; 
+    right: 5px; 
+    margin: 0; 
+    padding: 5px 10px; 
+    font-size: 25px;
+    
+  
+}
+
+/* Adjust for screens with a maximum width of 800px */
+@media screen and (max-width: 800px) {
+
+    #results-container {
+        min-height: 300px;
+    }
+
+    #save-favorite {
+        bottom: 400px;
+    }
+}
+
+
