@@ -31,6 +31,10 @@ function fetchMovieData(genreId) {
       // Display summary of movie
       const movieOverview = document.getElementById('movie-overview');
       movieOverview.textContent = `Summary: ${chosenMovie.overview}`;
+
+      // Displays release date of movie
+      const releaseDate = document.getElementById('release-date');
+      releaseDate.textContent = `Release date: ${chosenMovie.release_date}`;
     })
     .catch(error => {
       console.error('Error:', error);
@@ -54,6 +58,10 @@ function fetchRandomDrink() {
       // Displays name of drink
       const chosenDrinkEl = document.getElementById("chosenDrink");
       chosenDrinkEl.textContent = `Drink: ${chosenDrink}`;
+
+      // Displays the glass for the drink
+      const drinkGlassEl = document.getElementById( "drink-glass");
+      drinkGlassEl.textContent = `Glass for drink: ` + data.drinks[0].strGlass;
 
       // Create loop to cycle through up to 15 ingredients
       for (let i=1; i < 16; ++i) {
