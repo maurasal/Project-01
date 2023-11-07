@@ -5,7 +5,9 @@ section #genre-container {
     justify-content: center;
     align-items: center;
 }
-
+body {
+    font-family: 'Bungee Inline', cursive;
+  }
 
 /* Style for slogan */
 h2 {
@@ -281,12 +283,14 @@ p {
 }
 
 nav {
+    margin-bottom: 15px;
+    margin-left: 750px;
     float: none;
-    position: absolute;
     top: 30%;
     left: 41%;
     font-size: 3vh;
     font-weight: bold;
+    color: black;
 }
 
 .nav-item {
@@ -323,3 +327,23 @@ nav {
     }
   }
   
+  .wiggle {
+    animation: wiggle 2s ease infinite;
+  }
+  @keyframes wiggle {
+      0% {
+        transform: translateX(0) rotate(0deg);
+      }
+      25% {
+        transform: translateX(-5px) rotate(-2deg);
+      }
+      50% {
+        transform: translateX(0) rotate(0deg);
+      }
+      75% {
+        transform: translateX(5px) rotate(2deg);
+      }
+      100% {
+        transform: translateX(0) rotate(0deg);
+      }
+    }
