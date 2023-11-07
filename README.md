@@ -7,7 +7,8 @@ ReelRefreshers is a web application that enhances your movie-watching experience
 If you've ever wanted to 
 * Host a fun movie night with the pals 
 * Have a romantic date with your special someone, or 
-* Go on a solo movie mission after you pop some gummies and are ready to rock yourself to sleep to some good old-fashioned slasher noises...
+* Rock yourself to sleep to some good old-fashioned slasher noises...
+
 but find that you are too indecisive or uncreative to come up with the agenda, use ReelRefreshers! With ReelRefreshers, you tell us what genre you feel like watching, and we'll give you a movie within that category, along with a random beverage. This is a fun way to try something new, or maybe something you've never heard of. The drink will come with instructions on how to prepare it so that you can get those mixology skills up and impress your guests with a quality cocktail made by yours truly.
 
 ## Features
