@@ -28,7 +28,7 @@ There is no installation required to use this app. If you follow the link below,
 ![main page of site](./Assets/GIFs/Screenshot%202023-11-06%20185137.png)
 
 
-You can see a live demo of ReelRefreshers (put link here).
+You can see a live demo of ReelRefreshers at https://maurasal.github.io/reel-refreshers/
 
 ## How to Use
 1. Visit the ReelRefreshers website.
